@@ -1,0 +1,17 @@
+# macOS system files
+.DS_Store
+
+# Python cache files
+__pycache__/
+
+# Visual Studio Code settings
+.vscode/
+
+# Logs
+logs/
+
+# Test reports
+report.html
+
+# Temporary files or assets
+assets/
