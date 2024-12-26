@@ -18,31 +18,33 @@ This test automation framework validates essential features of the **OrangeHRM**
 - **Login**: Tests valid and invalid login attempts.
 - **Dashboard**: Ensures key dashboard elements are visible and interactive, and checks navigation functionality.
 
-The framework uses **Playwright** for browser automation and **pytest** for running and managing tests.
+The framework leverages Playwright for browser automation and pytest for running and managing tests. The tests are designed to be easily extensible and maintainable, with a clear separation of concerns using the Page Object Model (POM).
 
 ## Project Structure
+The directory structure is designed to organize the tests, page objects, utilities, and configurations clearly.
 
 playwright-framework/
-- ├── tests/
-- │   ├── login/
-- │   │   ├── test_valid_login.py
-- │   │   ├── test_invalid_login.py
-- │   ├── dashboard/
-- │   │   ├── test_dashboard_visibility.py
-- │   │   ├── test_dashboard_navigation.py
-- ├── pages/
-- │   ├── __init__.py
-- │   ├── base_page.py
-- │   ├── login_page.py
-- │   ├── dashboard_page.py
-- ├── utils/
-- │   ├── __init__.py
-- │   ├── helpers.py
-- │   ├── constants.py
-- ├── conftest.py
-- ├── pytest.ini
-- ├── requirements.txt
-- └── README.md
+├── tests/
+│   ├── login/
+│   │   ├── test_valid_login.py       # Test for valid login attempts
+│   │   ├── test_invalid_login.py     # Test for invalid login attempts
+│   ├── dashboard/
+│   │   ├── test_dashboard_visibility.py  # Test for dashboard visibility
+│   │   ├── test_dashboard_navigation.py  # Test for dashboard navigation
+├── pages/
+│   ├── __init__.py
+│   ├── base_page.py                  # Base page object with common actions
+│   ├── login_page.py                 # Login page object with login-specific actions
+│   ├── dashboard_page.py             # Dashboard page object with dashboard-specific actions
+├── utils/
+│   ├── __init__.py
+│   ├── helpers.py                    # Helper functions used across tests
+│   ├── constants.py                  # Constants such as selectors and URLs
+├── conftest.py                       # pytest configuration and fixtures
+├── pytest.ini                        # pytest configuration file
+├── requirements.txt                  # List of required Python dependencies
+└── README.md                         # Project documentation
+
 
 
 ## Prerequisites
@@ -60,5 +62,5 @@ Follow these steps to set up the testing framework:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/playwright-framework.git
+git clone https://github.com/marcusqatech/orangehrm-automation-framework.git
 cd playwright-framework
